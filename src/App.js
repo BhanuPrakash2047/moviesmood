@@ -9,9 +9,10 @@ import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-i
 
 function HeaderListItem({ itemName, link }) {
   return (
-    <li className="cursor-pointer p-3 text-lg rounded-lg transition-colors hover:bg-gradient-to-r from-blue-500 to-blue-700 duration-300 delay-150 ease-in-out hover:text-white">
-      <a href={link}>{itemName}</a>
+    <a href={link}> <li className="cursor-pointer p-3 text-lg rounded-lg transition-colors hover:bg-gradient-to-r from-blue-500 to-blue-700 duration-300 delay-150 ease-in-out hover:text-white">
+      {itemName}
     </li>
+    </a>
   );
 }
 
@@ -109,13 +110,13 @@ function Body() {
   };
 
   return (
-    <main className="bg-gradient-to-b from-black to-gray-800 min-h-screen py-10">
+    <main className="bg-gradient-to-b from-black to-gray-900 min-h-screen py-10">
       <div className="flex justify-center">
-        <form className="p-6 bg-gray-900 rounded-lg shadow-lg flex gap-4" onSubmit={handleSearch}>
+        <form className="  rounded-lg shadow-lg flex gap-4 flex-wrap" onSubmit={handleSearch}>
           <input
             type="text"
             placeholder="Search for Movies..."
-            className="bg-gray-700 text-white px-6 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300"
+            className=" flex flex-shrink bg-gray-700 text-white px-6 py-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300"
             onChange={(e) => setSearchMovie(e.target.value)}
           />
           <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
@@ -564,7 +565,7 @@ function App() {
 
     function Footer() {
       return (
-        <footer className="footer bg-gray-900 text-white py-6">
+        <footer className="footer bg-gray-950 text-white py-6">
           <div className="footer-content max-w-screen-xl mx-auto px-4">
             
             {/* Footer Text */}
